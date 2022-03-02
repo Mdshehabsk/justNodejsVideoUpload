@@ -1,0 +1,12 @@
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#form{
+    margin-bottom: 20px;
+}
+
+video{
+    width: 90%;
+    height: auto;
+}

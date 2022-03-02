@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <form action="/video" method="post" enctype="multipart/form-data" id="form" >
+            <input type="file" name="video" >
+            <input type="submit" >
+        </form>
+
+       <div class="videos">
+        <% video.forEach(element => { %>
+            <form action="/videoDelete/<%=element._id %>" method="post" >
+                <video controls>
+                    <source src='<%= element.video %>' >
+                </video>
+                <input type="submit" value="delete" >
+            </form>
+           <% }) %>
+       </div>
+</html>
